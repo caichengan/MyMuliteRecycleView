@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_margin="5dp"
+        android:background="@color/colorAccent"
+        android:layout_height="50dp">
+        <TextView
+            android:id="@+id/recycle01"
+            android:layout_width="match_parent"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:text="实现RecycleView的多布局第一种"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_margin="5dp"
+        android:background="@color/colorAccent"
+        android:layout_height="50dp">
+        <TextView
+            android:id="@+id/recycle02"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:text="实现RecycleView的多布局第二种"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_margin="5dp"
+        android:background="@color/colorAccent"
+        android:layout_height="50dp">
+        <TextView
+            android:id="@+id/recycle03"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:text="实现RecycleView的多布局第三种(嵌套)"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+</LinearLayout>
