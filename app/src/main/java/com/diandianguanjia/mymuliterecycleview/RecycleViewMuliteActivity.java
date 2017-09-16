@@ -29,6 +29,7 @@ public class  RecycleViewMuliteActivity extends AppCompatActivity implements MyA
 
     public static final String URL_PATH="http://dxy.com/app/i/feed/index/list?hardName=Google%20Nexus%205%20-%205.1.0%20-%20API%2022%20-%201080x1920&u=&bv=2015&ac=d5424fa6-adff-4b0a-8917-4264daf4a348&vc=5.1.9&vs=5.1&mc=00000000600ba4e6ffffffff99d603a9";
     private RecyclerView recyclerView;
+    private int spansize=2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +42,7 @@ public class  RecycleViewMuliteActivity extends AppCompatActivity implements MyA
         /**
          * 模拟数据实现商城  RecycleView  的多布局实现
          */
-        List<RecycleListMode> listRecyDatas=new ArrayList<>();
+        final List<RecycleListMode> listRecyDatas=new ArrayList<>();
         RecycleListMode mode0=new RecycleListMode();
         mode0.setStyle(0);
         mode0.setImgURL("https://img.alicdn.com/simba/img/TB1Kod0SXXXXXbPXFXXSutbFXXX.jpg");
@@ -99,33 +100,53 @@ public class  RecycleViewMuliteActivity extends AppCompatActivity implements MyA
         mode4.setContent("（虾仁+鱿鱼须+墨鱼花）185g/包)");
         mode4.setImgURL("https://img.alicdn.com/imgextra/i1/1910146537/TB2y03MabSGJuJjSZFqXXXo2pXa_!!1910146537.jpg_430x430q90.jpg");
         listRecyDatas.add(mode4);
+        RecycleListMode mode5=new RecycleListMode();
+        mode5.setId("");
+        mode5.setStyle(2);
+        mode5.setPrice("¥ 19.90");
+        mode5.setName("满66减30三合一海鲜");
+        mode5.setContent("（虾仁+鱿鱼须+墨鱼花）185g/包)");
+        mode5.setImgURL("https://img.alicdn.com/imgextra/i1/1910146537/TB2y03MabSGJuJjSZFqXXXo2pXa_!!1910146537.jpg_430x430q90.jpg");
+        listRecyDatas.add(mode5);
 
-        for (int i = 0; i < 10; i++) {
-            RecycleListMode mode5=new RecycleListMode();
-            mode5.setId("");
-            mode5.setStyle(2);
-            mode5.setPrice("¥ 19.90");
-            mode5.setName("满66减30三合一海鲜");
-            mode5.setContent("（虾仁+鱿鱼须+墨鱼花）185g/包)");
-            mode5.setImgURL("https://img.alicdn.com/imgextra/i1/1910146537/TB2y03MabSGJuJjSZFqXXXo2pXa_!!1910146537.jpg_430x430q90.jpg");
-            listRecyDatas.add(mode5);
+        for (int i = 0; i < 9; i++) {
+            RecycleListMode mode7=new RecycleListMode();
+            mode7.setId("");
+            mode7.setStyle(4);
+            mode7.setPrice("¥ 19.90");
+            mode7.setName("满66减30三合一海鲜");
+            mode7.setContent("（虾仁+鱿鱼须+墨鱼花）185g/包)");
+            mode7.setImgURL("https://img.alicdn.com/imgextra/i1/1910146537/TB2y03MabSGJuJjSZFqXXXo2pXa_!!1910146537.jpg_430x430q90.jpg");
+            listRecyDatas.add(mode7);
         }
 
-        GridLayoutManager gridLayoutManager=new GridLayoutManager(RecycleViewMuliteActivity.this,2);
+        GridLayoutManager gridLayoutManager=new GridLayoutManager(RecycleViewMuliteActivity.this,6);
         final RecycleViewMulitAdapter recycleAdapter=new RecycleViewMulitAdapter(this,listRecyDatas);
+
+
         gridLayoutManager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
             @Override
             public int getSpanSize(int position) {
-                int spansize=1;
-                switch (recycleAdapter.getItemViewType(position)){
 
-                    case 2:
-                        spansize=2;
-                    case 3:
-                        spansize=2;
+                switch (recycleAdapter.getItemViewType(position)){
                     case 0:
+                        spansize=6;
+                        break;
+                    case 1:
+                        spansize=3;
+                        break;
+                    case 2:
+                        spansize=3;
+                        break;
+                    case 3:
+                        spansize=6;
+                        break;
+                    case 4:
                         spansize=2;
+
+
                 }
+                Log.i(TAG, "getSpanSize: "+spansize);
                 return spansize;
             }
         });
@@ -134,7 +155,9 @@ public class  RecycleViewMuliteActivity extends AppCompatActivity implements MyA
         recycleAdapter.setClickListener(new RecycleViewMulitAdapter.OnItemClickListener() {
             @Override
             public void setItemClickListener(int position) {
-                Log.i(TAG, "setItemClickListener: "+position);
+
+                String name = listRecyDatas.get(position).getName();
+                Log.i(TAG, "setItemClickListener: "+name);
             }
         });
 

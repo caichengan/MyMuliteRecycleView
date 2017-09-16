@@ -3,8 +3,11 @@ package com.diandianguanjia.mymuliterecycleview;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+
+import com.chad.library.adapter.base.BaseQuickAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -43,6 +46,8 @@ public class RecycleActivity extends AppCompatActivity{
         mode.setStyle(1);
         mode.setImgURL("https://img.alicdn.com/imgextra/i1/1910146537/TB2y03MabSGJuJjSZFqXXXo2pXa_!!1910146537.jpg_430x430q90.jpg");
         listRecyDatas.add(mode);
+
+
 
         RecycleListMode mode1=new RecycleListMode();
         mode1.setId("");
@@ -92,9 +97,15 @@ public class RecycleActivity extends AppCompatActivity{
             listRecyDatas.add(mode5);
         }
 
-        QBaseRecycleAdapter adapter=new QBaseRecycleAdapter(listRecyDatas);
+
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        //GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2);
+
+        final QBaseRecycleAdapter adapter=new QBaseRecycleAdapter(listRecyDatas);
+
         recyclerView.setAdapter(adapter);
+
 
     }
 }

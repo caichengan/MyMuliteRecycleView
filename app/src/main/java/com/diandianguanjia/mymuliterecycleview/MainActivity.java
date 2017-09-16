@@ -23,9 +23,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
        TextView recycle02= (TextView) findViewById(R.id.recycle02);
        TextView recycle03= (TextView) findViewById(R.id.recycle03);
        TextView recycle04= (TextView) findViewById(R.id.recycle04);
+       TextView recycle05= (TextView) findViewById(R.id.recycle05);
         recycle01.setOnClickListener(this);
         recycle02.setOnClickListener(this);
+        recycle03.setOnClickListener(this);
         recycle04.setOnClickListener(this);
+        recycle05.setOnClickListener(this);
     }
 
     @Override
@@ -43,6 +46,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.recycle04:
                 startActivity(new Intent(this,RecycleActivity.class));
+                break;
+            case R.id.recycle05:
+                startActivity(new Intent(this,RecycleSectionActivity.class));
                 break;
         }
 

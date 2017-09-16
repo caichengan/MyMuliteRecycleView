@@ -56,5 +56,18 @@
             android:text="实现RecycleView的多布局"
             android:layout_height="match_parent" />
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_margin="5dp"
+        android:background="@color/colorAccent"
+        android:layout_height="50dp">
+        <TextView
+            android:id="@+id/recycle05"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:text="实现RecycleView的分组GridView布局"
+            android:layout_height="match_parent" />
+    </LinearLayout>
 
 </LinearLayout>

@@ -1,6 +1,9 @@
 package com.diandianguanjia.mymuliterecycleview;
 
 import android.graphics.BitmapFactory;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 
 import com.chad.library.adapter.base.BaseMultiItemQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
@@ -18,6 +21,7 @@ public class QBaseRecycleAdapter extends BaseMultiItemQuickAdapter<RecycleListMo
      *
      * @param data A new list is created out of this one to avoid mutable list
      */
+    private RecyclerView mRecycle;
     public QBaseRecycleAdapter(List<RecycleListMode> data) {
         super(data);
         addItemType(RecycleListMode.TEXT,R.layout.item_list_recycle);
@@ -29,6 +33,7 @@ public class QBaseRecycleAdapter extends BaseMultiItemQuickAdapter<RecycleListMo
 
         switch (item.getItemType()){
             case RecycleListMode.TEXT:
+
                 helper.setText(R.id.tv_shopping_name,item.getName());
                 helper.setText(R.id.tv_shopping_desc,item.getContent());
                 helper.setText(R.id.tv_shopping_new_money,item.getPrice());
@@ -42,5 +47,14 @@ public class QBaseRecycleAdapter extends BaseMultiItemQuickAdapter<RecycleListMo
                 //helper.setImageBitmap(R.id.img_shopping_img, BitmapFactory.decodeFile(item.getImgURL()));
                 break;
         }
+    }
+
+
+
+    @Override
+    public void onAttachedToRecyclerView(RecyclerView recyclerView) {
+        this.mRecycle=recyclerView;
+
+
     }
 }

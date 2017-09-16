@@ -96,6 +96,10 @@ public class RecycleViewMulitAdapter extends RecyclerView.Adapter<RecycleViewMul
                 break;
             case 3:
                 itemView=inflate.inflate(R.layout.item_recycle_02,parent,false);
+                break;
+            case 4:
+                itemView=inflate.inflate(R.layout.item_list_recycle,parent,false);
+                break;
         }
 
         ViewHolder holder=new ViewHolder(itemView);
@@ -120,6 +124,7 @@ public class RecycleViewMulitAdapter extends RecyclerView.Adapter<RecycleViewMul
 
                 break;
             case 1:
+            case 4:
 
                TextView tvName= (TextView) holder.getView(R.id.tv_shopping_name);
                TextView tvDesc= (TextView) holder.getView(R.id.tv_shopping_desc);
