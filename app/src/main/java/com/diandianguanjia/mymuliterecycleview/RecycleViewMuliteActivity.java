@@ -6,6 +6,7 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.View;
 
 import com.google.gson.Gson;
 
@@ -36,9 +37,112 @@ public class  RecycleViewMuliteActivity extends AppCompatActivity implements MyA
 
         setContentView(R.layout.activity_recycle_view_mulite);
         recyclerView = (RecyclerView) findViewById(R.id.recycleViewlist);
+
         /**
-         * 第一种 RecycleView多布局的实现
+         * 模拟数据实现商城  RecycleView  的多布局实现
          */
+        List<RecycleListMode> listRecyDatas=new ArrayList<>();
+        RecycleListMode mode0=new RecycleListMode();
+        mode0.setStyle(0);
+        mode0.setImgURL("https://img.alicdn.com/simba/img/TB1Kod0SXXXXXbPXFXXSutbFXXX.jpg");
+        listRecyDatas.add(mode0);
+
+        RecycleListMode mode=new RecycleListMode();
+        mode.setId("");
+        mode.setName("满66减30三合一海鲜");
+        mode.setContent("（虾仁+鱿鱼须+墨鱼花）185g/包)");
+        mode.setPrice("¥ 19.90");
+        mode.setStyle(1);
+        mode.setImgURL("https://img.alicdn.com/imgextra/i1/1910146537/TB2y03MabSGJuJjSZFqXXXo2pXa_!!1910146537.jpg_430x430q90.jpg");
+        listRecyDatas.add(mode);
+
+        RecycleListMode mode1=new RecycleListMode();
+        mode1.setId("");
+        mode1.setStyle(1);
+        mode1.setName("【天猫超市】泸州老窖奥普蓝");
+        mode1.setContent("原浆啤酒320ml*6罐(蓝罐) 六连包");
+        mode1.setPrice("¥ 24.90");
+        mode1.setImgURL("https://img.alicdn.com/imgextra/i3/725677994/TB1franSVXXXXX9XFXXXXXXXXXX_!!0-item_pic.jpg_430x430q90.jpg");
+        listRecyDatas.add(mode1);
+
+        RecycleListMode mode2=new RecycleListMode();
+        mode2.setId("");
+        mode2.setStyle(1);
+        mode2.setPrice("¥ 19.90");
+        mode2.setName("满66减30三合一海鲜");
+        mode2.setContent("（虾仁+鱿鱼须+墨鱼花）185g/包)");
+        mode2.setImgURL("https://img.alicdn.com/imgextra/i1/1910146537/TB2y03MabSGJuJjSZFqXXXo2pXa_!!1910146537.jpg_430x430q90.jpg");
+        listRecyDatas.add(mode2);
+
+        RecycleListMode mode3=new RecycleListMode();
+        mode3.setId("");
+        mode3.setStyle(1);
+        mode3.setPrice("¥ 19.90");
+        mode3.setName("满66减30三合一海鲜");
+        mode3.setContent("（虾仁+鱿鱼须+墨鱼花）185g/包)");
+        mode3.setImgURL("https://img.alicdn.com/imgextra/i1/1910146537/TB2y03MabSGJuJjSZFqXXXo2pXa_!!1910146537.jpg_430x430q90.jpg");
+        listRecyDatas.add(mode3);
+
+        RecycleListMode mode6=new RecycleListMode();
+        mode6.setId("");
+        mode6.setStyle(3);
+        mode6.setPrice("");
+        mode6.setName("超值优惠，首买送家电");
+        mode6.setContent("接口和首付款计划开始无法互联网");
+        listRecyDatas.add(mode6);
+
+        RecycleListMode mode4=new RecycleListMode();
+        mode4.setId("");
+        mode4.setStyle(2);
+        mode4.setPrice("¥ 19.90");
+        mode4.setName("满66减30三合一海鲜");
+        mode4.setContent("（虾仁+鱿鱼须+墨鱼花）185g/包)");
+        mode4.setImgURL("https://img.alicdn.com/imgextra/i1/1910146537/TB2y03MabSGJuJjSZFqXXXo2pXa_!!1910146537.jpg_430x430q90.jpg");
+        listRecyDatas.add(mode4);
+
+        for (int i = 0; i < 10; i++) {
+            RecycleListMode mode5=new RecycleListMode();
+            mode5.setId("");
+            mode5.setStyle(2);
+            mode5.setPrice("¥ 19.90");
+            mode5.setName("满66减30三合一海鲜");
+            mode5.setContent("（虾仁+鱿鱼须+墨鱼花）185g/包)");
+            mode5.setImgURL("https://img.alicdn.com/imgextra/i1/1910146537/TB2y03MabSGJuJjSZFqXXXo2pXa_!!1910146537.jpg_430x430q90.jpg");
+            listRecyDatas.add(mode5);
+        }
+
+        GridLayoutManager gridLayoutManager=new GridLayoutManager(RecycleViewMuliteActivity.this,2);
+        final RecycleViewMulitAdapter recycleAdapter=new RecycleViewMulitAdapter(this,listRecyDatas);
+        gridLayoutManager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
+            @Override
+            public int getSpanSize(int position) {
+                int spansize=1;
+                switch (recycleAdapter.getItemViewType(position)){
+
+                    case 2:
+                        spansize=2;
+                    case 3:
+                        spansize=2;
+                    case 0:
+                        spansize=2;
+                }
+                return spansize;
+            }
+        });
+        recyclerView.setLayoutManager(gridLayoutManager);
+        recyclerView.setAdapter(recycleAdapter);
+        recycleAdapter.setClickListener(new RecycleViewMulitAdapter.OnItemClickListener() {
+            @Override
+            public void setItemClickListener(int position) {
+                Log.i(TAG, "setItemClickListener: "+position);
+            }
+        });
+
+
+
+      /*  *//**
+         * 第一种 RecycleView多布局的实现
+         *//*
         GridLayoutManager gridLayoutManager=new GridLayoutManager(RecycleViewMuliteActivity.this,2);
         adapter=new MyAdapter(RecycleViewMuliteActivity.this,data);
         gridLayoutManager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
@@ -57,7 +161,7 @@ public class  RecycleViewMuliteActivity extends AppCompatActivity implements MyA
         recyclerView.setLayoutManager(gridLayoutManager);
         recyclerView.setAdapter(adapter);
         adapter.setClickListener(RecycleViewMuliteActivity.this);
-        getDatas();
+        getDatas();*/
 
 
 

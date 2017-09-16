@@ -6,12 +6,15 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:orientation="vertical"
+        android:background="@android:color/holo_orange_dark"
         android:layout_height="wrap_content">
 
-        <android.support.v4.view.ViewPager
+        <ImageView
             xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="150dp"
+            android:background="@android:color/white"
+            android:src="@drawable/shop01"
             android:id="@+id/recycleViewPager"
             />
         <LinearLayout
@@ -20,11 +23,32 @@
             android:layout_height="wrap_content">
             <TextView
                 android:layout_width="match_parent"
-                android:id="@+id/tvList"
-                android:text="主题"
-                android:gravity="center_vertical"
+                android:id="@+id/tvTitle"
+                android:text="主题计划萨斯股份计划"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:textColor="@android:color/white"
                 android:layout_marginLeft="10dp"
-                android:layout_height="50dp" />
+                android:layout_height="40dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:id="@+id/tvDesc"
+                android:textColor="@android:color/white"
+                android:text="主ds很多事肯定是客户开始电话客服很快题"
+                android:gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_height="20dp" />
+
+            <include layout="@layout/item_shopping"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
 
             <android.support.v7.widget.RecyclerView
                 xmlns:android="http://schemas.android.com/apk/res/android"

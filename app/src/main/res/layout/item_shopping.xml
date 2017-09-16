@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@android:color/holo_orange_dark"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:background="@android:color/white"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/img_shopping_img"
+            android:src="@drawable/shop02"
+            android:layout_width="match_parent"
+            android:layout_margin="5dp"
+            android:layout_height="150dp" />
+
+
+            <LinearLayout
+                android:id="@+id/line_shoppong"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_below="@id/img_shopping_img"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tv_shopping_name"
+                    android:text="手机放寒假"
+                    android:padding="5dp"
+                    android:textSize="15sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <View
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="2dp"/>
+                <TextView
+                    android:id="@+id/tv_shopping_new_money"
+                    android:text="￥5567"
+                    android:padding="5dp"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/holo_red_light"
+                    android:layout_width="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tv_shopping_old_money"
+                    android:text="原价：￥8200"
+                    android:padding="5dp"
+                    android:layout_marginRight="10dp"
+                    android:textSize="12sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_below="@id/line_shoppong"
+            android:layout_marginBottom="5dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_shopping_desc"
+                android:text="手机放寒假"
+                android:padding="5dp"
+                android:textSize="12sp"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="2dp"/>
+
+            <Button
+                android:id="@+id/item_shopping_order"
+                android:layout_width="120dp"
+                android:text="立即购买"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@android:color/holo_red_light"
+                android:textColor="@android:color/white"
+                android:layout_height="30dp" />
+
+
+        </LinearLayout>
+
+
+
+        </RelativeLayout>
+
+
+
+
+</LinearLayout>

@@ -2,11 +2,83 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-
-    <TextView
-        android:id="@+id/tv_recycle_list"
+    android:background="@android:color/holo_orange_dark"
+    android:layout_height="350dp">
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp" />
+        android:layout_margin="10dp"
+        android:background="@android:color/white"
+        android:layout_height="330dp">
+        <ImageView
+            android:id="@+id/img_shopping_img"
+            android:src="@drawable/shop02"
+            android:layout_width="match_parent"
+            android:layout_margin="5dp"
+            android:layout_height="150dp" />
+
+
+        <LinearLayout
+            android:id="@+id/line_shoppong"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_below="@id/img_shopping_img"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_shopping_name"
+                android:text="手机放寒好几个手机的说法空间和会计师开发还是可好看话费假"
+                android:padding="5dp"
+                android:textSize="15sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tv_shopping_desc"
+                android:text="手机放寒假"
+                android:padding="5dp"
+                android:textSize="12sp"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_shopping_new_money"
+                android:text="￥5567"
+                android:padding="5dp"
+                android:textSize="14sp"
+                android:textColor="@android:color/holo_red_light"
+                android:layout_width="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_height="wrap_content" />
+
+
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="2dp"/>
+
+            <Button
+                android:id="@+id/item_shopping_order"
+                android:layout_width="120dp"
+                android:text="立即购买"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@android:color/holo_red_light"
+                android:textColor="@android:color/white"
+                android:layout_height="30dp" />
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+
 
 </LinearLayout>

@@ -12,6 +12,25 @@ public class RecycleListMode {
     private String imgURL;
     private String content;
 
+    private int style;
+    private String price;
+
+    public int getStyle() {
+        return style;
+    }
+
+    public void setStyle(int style) {
+        this.style = style;
+    }
+
+    public String getPrice() {
+        return price;
+    }
+
+    public void setPrice(String price) {
+        this.price = price;
+    }
+
     public String getId() {
         return id;
     }
