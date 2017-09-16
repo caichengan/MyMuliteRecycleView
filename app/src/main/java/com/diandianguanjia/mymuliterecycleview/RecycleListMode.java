@@ -1,11 +1,15 @@
 package com.diandianguanjia.mymuliterecycleview;
 
+import com.chad.library.adapter.base.entity.MultiItemEntity;
+
 /**
  * Created by an on 2017/9/15.
  */
 
-public class RecycleListMode {
+public class RecycleListMode implements MultiItemEntity {
 
+    public static final int TEXT = 1;
+    public static final int IMG = 2;
     private String id;
     private String name;
     private String title;
@@ -69,5 +73,11 @@ public class RecycleListMode {
 
     public void setContent(String content) {
         this.content = content;
+    }
+
+    @Override
+    public int getItemType() {
+
+        return style;
     }
 }
