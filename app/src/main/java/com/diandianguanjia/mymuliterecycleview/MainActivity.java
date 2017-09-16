@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(new Intent(this,RecycleActivity.class));
                 break;
             case R.id.recycle05:
+
                 startActivity(new Intent(this,RecycleSectionActivity.class));
                 break;
         }
