@@ -1,4 +1,4 @@
-package com.diandianguanjia.mymuliterecycleview;
+package com.diandianguanjia.mymuliterecycleview.oneway;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.diandianguanjia.mymuliterecycleview.R;
 
 import java.util.HashMap;
 import java.util.List;

@@ -1,12 +1,11 @@
-package com.diandianguanjia.mymuliterecycleview;
+package com.diandianguanjia.mymuliterecycleview.fourway;
 
-import android.graphics.BitmapFactory;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import com.chad.library.adapter.base.BaseMultiItemQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
+import com.diandianguanjia.mymuliterecycleview.R;
+import com.diandianguanjia.mymuliterecycleview.oneway.RecycleListMode;
 
 import java.util.List;
 
@@ -24,7 +23,7 @@ public class QBaseRecycleAdapter extends BaseMultiItemQuickAdapter<RecycleListMo
     private RecyclerView mRecycle;
     public QBaseRecycleAdapter(List<RecycleListMode> data) {
         super(data);
-        addItemType(RecycleListMode.TEXT,R.layout.item_list_recycle);
+        addItemType(RecycleListMode.TEXT, R.layout.item_list_recycle);
         addItemType(RecycleListMode.IMG,R.layout.item_grid_recycle);
     }
 

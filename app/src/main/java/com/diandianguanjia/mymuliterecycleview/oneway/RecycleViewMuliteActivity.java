@@ -1,13 +1,15 @@
-package com.diandianguanjia.mymuliterecycleview;
+package com.diandianguanjia.mymuliterecycleview.oneway;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
-import android.view.View;
+import android.widget.Toast;
 
+import com.diandianguanjia.mymuliterecycleview.main.ModleDats;
+import com.diandianguanjia.mymuliterecycleview.main.MyAdapter;
+import com.diandianguanjia.mymuliterecycleview.R;
 import com.google.gson.Gson;
 
 import java.io.IOException;
@@ -157,7 +159,8 @@ public class  RecycleViewMuliteActivity extends AppCompatActivity implements MyA
             public void setItemClickListener(int position) {
 
                 String name = listRecyDatas.get(position).getName();
-                Log.i(TAG, "setItemClickListener: "+name);
+
+                Toast.makeText(RecycleViewMuliteActivity.this, "第点击第"+position+"个"+name, Toast.LENGTH_SHORT).show();
             }
         });
 

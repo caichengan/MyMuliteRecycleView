@@ -1,16 +1,15 @@
-package com.diandianguanjia.mymuliterecycleview;
+package com.diandianguanjia.mymuliterecycleview.fireway;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.diandianguanjia.mymuliterecycleview.R;
+
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by an on 2017/9/16.

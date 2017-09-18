@@ -1,4 +1,4 @@
-package com.diandianguanjia.mymuliterecycleview;
+package com.diandianguanjia.mymuliterecycleview.fireway;
 
 /**
  * Created by bpncool on 2/23/2016.

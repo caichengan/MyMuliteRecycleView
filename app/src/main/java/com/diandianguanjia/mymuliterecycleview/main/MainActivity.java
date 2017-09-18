@@ -1,4 +1,4 @@
-package com.diandianguanjia.mymuliterecycleview;
+package com.diandianguanjia.mymuliterecycleview.main;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,6 +6,13 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
+
+import com.diandianguanjia.mymuliterecycleview.R;
+import com.diandianguanjia.mymuliterecycleview.fireway.RecycleSectionActivity;
+import com.diandianguanjia.mymuliterecycleview.fourway.RecycleActivity;
+import com.diandianguanjia.mymuliterecycleview.oneway.RecycleViewMuliteActivity;
+import com.diandianguanjia.mymuliterecycleview.threeway.RecycleThreeWayMuliteActivity;
+import com.diandianguanjia.mymuliterecycleview.twoway.RecycleTwoWayMuliteActivity;
 
 /**
  * Created by an on 2017/9/15.

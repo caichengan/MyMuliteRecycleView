@@ -1,4 +1,4 @@
-package com.diandianguanjia.mymuliterecycleview;
+package com.diandianguanjia.mymuliterecycleview.fireway;
 
 import android.content.Context;
 import android.support.v7.widget.GridLayoutManager;
@@ -9,6 +9,8 @@ import android.view.ViewGroup;
 import android.widget.CompoundButton;
 import android.widget.TextView;
 import android.widget.ToggleButton;
+
+import com.diandianguanjia.mymuliterecycleview.R;
 
 import java.util.ArrayList;
 

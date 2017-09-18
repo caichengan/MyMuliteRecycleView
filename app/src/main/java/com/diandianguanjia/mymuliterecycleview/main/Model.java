@@ -1,4 +1,4 @@
-package com.diandianguanjia.mymuliterecycleview;
+package com.diandianguanjia.mymuliterecycleview.main;
 
 /**
  * Created by an on 2017/9/15.

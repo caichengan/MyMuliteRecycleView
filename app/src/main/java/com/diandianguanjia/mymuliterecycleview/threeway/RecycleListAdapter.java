@@ -1,4 +1,4 @@
-package com.diandianguanjia.mymuliterecycleview;
+package com.diandianguanjia.mymuliterecycleview.threeway;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -9,6 +9,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.diandianguanjia.mymuliterecycleview.R;
+import com.diandianguanjia.mymuliterecycleview.oneway.RecycleListMode;
 
 import java.util.List;
 
@@ -16,7 +18,7 @@ import java.util.List;
  * Created by an on 2017/9/15.
  */
 
-class RecycleListAdapter extends RecyclerView.Adapter<RecycleListAdapter.ViewHolder> implements View.OnClickListener {
+public class RecycleListAdapter extends RecyclerView.Adapter<RecycleListAdapter.ViewHolder> implements View.OnClickListener {
     private Context context;
     private List<RecycleListMode> dataLists;
 

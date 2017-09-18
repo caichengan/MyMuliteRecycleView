@@ -1,13 +1,12 @@
-package com.diandianguanjia.mymuliterecycleview;
+package com.diandianguanjia.mymuliterecycleview.oneway;
 
 import com.chad.library.adapter.base.entity.MultiItemEntity;
-import com.chad.library.adapter.base.entity.SectionEntity;
 
 /**
  * Created by an on 2017/9/15.
  */
 
-public class RecycleSectMode extends SectionEntity {
+public class RecycleListMode implements MultiItemEntity {
 
     public static final int TEXT = 1;
     public static final int IMG = 2;
@@ -19,14 +18,6 @@ public class RecycleSectMode extends SectionEntity {
 
     private int style;
     private String price;
-
-    public RecycleSectMode(boolean isHeader, String header) {
-        super(isHeader, header);
-    }
-
-    public RecycleSectMode(Object o) {
-        super(o);
-    }
 
     public int getStyle() {
         return style;
@@ -84,5 +75,9 @@ public class RecycleSectMode extends SectionEntity {
         this.content = content;
     }
 
+    @Override
+    public int getItemType() {
 
+        return style;
+    }
 }

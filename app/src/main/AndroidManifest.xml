@@ -11,18 +11,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RecycleViewMuliteActivity"/>
-        <activity android:name=".RecycleTwoWayMuliteActivity"/>
-        <activity android:name=".RecycleThreeWayMuliteActivity"/>
-        <activity android:name=".RecycleActivity"/>
-        <activity android:name=".RecycleSectionActivity"/>
+        <activity android:name=".oneway.RecycleViewMuliteActivity"/>
+        <activity android:name=".twoway.RecycleTwoWayMuliteActivity"/>
+        <activity android:name=".threeway.RecycleThreeWayMuliteActivity"/>
+        <activity android:name=".fourway.RecycleActivity"/>
+        <activity android:name=".fireway.RecycleSectionActivity"/>
     </application>
 
 </manifest>

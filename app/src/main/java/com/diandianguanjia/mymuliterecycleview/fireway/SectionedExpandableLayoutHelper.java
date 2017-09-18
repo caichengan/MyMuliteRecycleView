@@ -1,4 +1,4 @@
-package com.diandianguanjia.mymuliterecycleview;
+package com.diandianguanjia.mymuliterecycleview.fireway;
 
 import android.content.Context;
 import android.support.v7.widget.GridLayoutManager;

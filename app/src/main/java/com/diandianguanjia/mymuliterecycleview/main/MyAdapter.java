@@ -1,4 +1,4 @@
-package com.diandianguanjia.mymuliterecycleview;
+package com.diandianguanjia.mymuliterecycleview.main;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -9,13 +9,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.diandianguanjia.mymuliterecycleview.R;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import static android.R.attr.cacheColorHint;
-import static android.R.attr.data;
 
 /**
  * Created by an on 2017/9/15.

@@ -1,23 +1,13 @@
-package com.diandianguanjia.mymuliterecycleview;
+package com.diandianguanjia.mymuliterecycleview.twoway;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 
-import com.google.gson.Gson;
-
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-
-import okhttp3.Call;
-import okhttp3.Callback;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
+import com.diandianguanjia.mymuliterecycleview.main.MyAdapter;
+import com.diandianguanjia.mymuliterecycleview.R;
 
 public class RecycleTwoWayMuliteActivity extends AppCompatActivity implements MyAdapter.OnItemClickListener {
 
